@@ -13,7 +13,7 @@ import { TypingTextComponent } from '../../../../shared/ui/typing-text/typing-te
       <app-glow-orb
         [size]="350"
         positionClass="top-40 left-0 -translate-x-1/4"
-        gradient="radial-gradient(circle, rgba(152,87,211,0.25) 0%, rgba(152,87,211,0) 70%)"
+        gradient="radial-gradient(circle, color-mix(in srgb, var(--color-brand-400) 25%, transparent) 0%, transparent 70%)"
       />
 
       <div class="relative mx-auto max-w-6xl">

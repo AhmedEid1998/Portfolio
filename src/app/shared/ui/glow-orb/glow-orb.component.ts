@@ -18,6 +18,6 @@ export class GlowOrbComponent {
   readonly size = input(400);
   readonly positionClass = input('top-0 left-1/2 -translate-x-1/2');
   readonly gradient = input(
-    'radial-gradient(circle, rgba(113,39,186,0.35) 0%, rgba(113,39,186,0) 70%)',
+    'radial-gradient(circle, color-mix(in srgb, var(--color-brand-500) 35%, transparent) 0%, transparent 70%)',
   );
 }

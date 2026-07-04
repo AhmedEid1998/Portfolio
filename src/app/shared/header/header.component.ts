@@ -1,11 +1,12 @@
 import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
 import { PortfolioService } from '../../core/services/portfolio.service';
+import { ColorPalettePickerComponent } from '../color-palette-picker/color-palette-picker.component';
 import { ThemeToggleComponent } from '../theme-toggle/theme-toggle.component';
 
 @Component({
   selector: 'app-header',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [ThemeToggleComponent],
+  imports: [ThemeToggleComponent, ColorPalettePickerComponent],
   template: `
     <header
       class="fixed inset-x-0 top-0 z-50 border-b border-slate-200/50 bg-white/70 backdrop-blur-xl dark:border-white/5 dark:bg-surface-dark/70"
@@ -36,6 +37,7 @@ import { ThemeToggleComponent } from '../theme-toggle/theme-toggle.component';
             }
           </nav>
 
+          <app-color-palette-picker />
           <app-theme-toggle />
 
           <button

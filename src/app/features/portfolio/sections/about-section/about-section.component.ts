@@ -11,7 +11,7 @@ import { GlowOrbComponent } from '../../../../shared/ui/glow-orb/glow-orb.compon
       <app-glow-orb
         [size]="400"
         positionClass="top-0 right-1/4"
-        gradient="radial-gradient(circle, rgba(152,87,211,0.2) 0%, rgba(152,87,211,0) 70%)"
+        gradient="radial-gradient(circle, color-mix(in srgb, var(--color-brand-400) 20%, transparent) 0%, transparent 70%)"
       />
 
       <div class="relative mx-auto max-w-6xl">

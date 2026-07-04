@@ -12,11 +12,16 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
   <script>
     (function () {
-      var stored = localStorage.getItem('portfolio-theme');
-      var theme = stored === 'light' || stored === 'dark'
-        ? stored
+      var storedTheme = localStorage.getItem('portfolio-theme');
+      var theme = storedTheme === 'light' || storedTheme === 'dark'
+        ? storedTheme
         : window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
       document.documentElement.classList.toggle('dark', theme === 'dark');
+
+      var storedAccent = localStorage.getItem('portfolio-accent');
+      if (storedAccent && storedAccent !== 'purple') {
+        document.documentElement.setAttribute('data-accent', storedAccent);
+      }
     })();
   </script>
 </head>
