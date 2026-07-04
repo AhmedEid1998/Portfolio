@@ -43,11 +43,9 @@ export interface Experience {
 
 export interface Project {
   id: string;
-  label: string;
   title: string;
   description: string;
   tags: string[];
-  reverse?: boolean;
 }
 
 export interface Achievement {

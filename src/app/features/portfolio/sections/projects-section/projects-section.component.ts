@@ -15,10 +15,16 @@ import { GlowOrbComponent } from '../../../../shared/ui/glow-orb/glow-orb.compon
         gradient="radial-gradient(circle, rgba(113,39,186,0.2) 0%, rgba(113,39,186,0) 70%)"
       />
 
-      <div class="relative mx-auto max-w-6xl space-y-20">
-        @for (project of projects(); track project.id) {
-          <app-project-card [project]="project" />
-        }
+      <div class="relative mx-auto max-w-6xl">
+        <h2 class="mb-10 text-3xl font-bold text-slate-900 sm:text-4xl dark:text-white">
+          Featured Projects
+        </h2>
+
+        <div class="grid gap-6 sm:grid-cols-2">
+          @for (project of projects(); track project.id) {
+            <app-project-card [project]="project" />
+          }
+        </div>
       </div>
     </section>
   `,

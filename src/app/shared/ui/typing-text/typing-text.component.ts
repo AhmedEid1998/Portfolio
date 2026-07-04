@@ -1,6 +1,7 @@
 import {
   ChangeDetectionStrategy,
   Component,
+  computed,
   DestroyRef,
   inject,
   input,
@@ -12,12 +13,17 @@ import {
   selector: 'app-typing-text',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
-    <span class="inline-flex items-center">
-      <span>{{ displayed() }}</span>
-      <span
-        class="ml-1 inline-block h-[1em] w-0.5 animate-pulse bg-brand-500 dark:bg-brand-400"
-        aria-hidden="true"
-      ></span>
+    <span class="inline-grid whitespace-nowrap align-bottom">
+      <span class="invisible col-start-1 row-start-1" aria-hidden="true">
+        {{ longestPhrase() }}
+      </span>
+      <span class="col-start-1 row-start-1 inline-flex items-center">
+        <span>{{ displayed() }}</span>
+        <span
+          class="ml-1 inline-block h-[1em] w-0.5 animate-pulse bg-brand-500 dark:bg-brand-400"
+          aria-hidden="true"
+        ></span>
+      </span>
     </span>
   `,
 })
@@ -30,6 +36,12 @@ export class TypingTextComponent implements OnInit {
   readonly pauseDuration = input(1800);
 
   readonly displayed = signal('');
+  readonly longestPhrase = computed(() =>
+    this.phrases().reduce(
+      (longest, phrase) => (phrase.length > longest.length ? phrase : longest),
+      '',
+    ),
+  );
 
   private phraseIndex = 0;
   private charIndex = 0;

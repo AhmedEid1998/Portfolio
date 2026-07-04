@@ -36,8 +36,8 @@ export const PORTFOLIO_DATA: PortfolioData = {
   },
   navLinks: [
     { label: 'Home', fragment: 'home' },
-    { label: 'About', fragment: 'about' },
     { label: 'Experience', fragment: 'experience' },
+    { label: 'About', fragment: 'about' },
     { label: 'Projects', fragment: 'projects' },
     { label: 'Contact', fragment: 'contact' },
   ],
@@ -142,7 +142,6 @@ export const PORTFOLIO_DATA: PortfolioData = {
   projects: [
     {
       id: 'emr',
-      label: 'Featured Project',
       title: 'Glamera EMR System',
       description:
         'A comprehensive Electronic Medical Record platform built with Angular and NGXS. Supports 10+ core medical workflows including allergies, prescriptions, vitals, family history, encounters, and care plans — onboarding 500+ patient records with healthcare compliance standards.',
@@ -150,16 +149,13 @@ export const PORTFOLIO_DATA: PortfolioData = {
     },
     {
       id: 'vultara',
-      label: 'Featured Project',
       title: 'Vultara Cybersecurity Platform',
       description:
         'An automotive cybersecurity monitoring platform enabling visualization of 1K+ security events monthly. Features interactive dashboards with charts and KPIs, advanced export to Excel and Word, and customizable reporting tools used by 50+ global clients.',
       tags: ['Angular', 'Node.js', 'MongoDB', 'Dashboards'],
-      reverse: true,
     },
     {
       id: 'erp',
-      label: 'Featured Project',
       title: 'Hawsabah ERP Platform',
       description:
         'A salon business ERP serving 200+ businesses across revenues, expenses, and operations. Transformed Figma designs into pixel-perfect Angular components with 30% performance improvement through strategic refactoring.',
@@ -167,12 +163,10 @@ export const PORTFOLIO_DATA: PortfolioData = {
     },
     {
       id: 'ecommerce',
-      label: 'Featured Project',
       title: 'Wavyi eCommerce Platform',
       description:
         'A full eCommerce platform built from the ground up, serving 500+ daily active users. Implemented product listing, cart management, checkout flow, and user accounts with Angular best practices in state management and architecture.',
       tags: ['Angular', 'eCommerce', 'RxJS', 'REST API'],
-      reverse: true,
     },
   ],
   achievements: [
