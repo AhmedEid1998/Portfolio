@@ -1,0 +1,36 @@
+@use 'tailwindcss';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+  --color-brand-50: #f5f0ff;
+  --color-brand-100: #ede5ff;
+  --color-brand-200: #dcc9ff;
+  --color-brand-300: #c4a0ff;
+  --color-brand-400: #a96df5;
+  --color-brand-500: #9857d3;
+  --color-brand-600: #7127ba;
+  --color-brand-700: #5a1f96;
+  --color-brand-800: #4a1978;
+  --color-brand-900: #3d1563;
+  --color-brand-950: #240a3d;
+
+  --color-surface-light: #faf9fc;
+  --color-surface-dark: #11071f;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-surface-light font-sans text-slate-900 antialiased transition-colors duration-300;
+  @apply dark:bg-surface-dark dark:text-slate-100;
+}
+
+::selection {
+  @apply bg-brand-500/30 text-brand-950 dark:bg-brand-400/30 dark:text-white;
+}
